@@ -1,9 +1,26 @@
-const buttonElements = document.querySelectorAll('button');
+const buttoneElements = document.querySelectorAll('button');
+let row = 1;
+let letter =1;
+const wordElements = document.querySelectorAll('.word-row');
 
-buttonElements.forEach((Element) => {
-    Element.addEventListener('click',
-     keypress(Element.attributes["data-key"]. value))
-})
-    function keypress(key) {
-console.log(key);
-    }
+buttoneElements.forEach((eliment) => {
+    eliment.addEventListener('click' , function() {
+        keypress(eliment.atttributes["data-key"].value)
+    });
+});
+
+
+function populateWord(key) {
+    wordElements[row - 1].querySelectorAll('.word')[letter - 1].innerText = key;
+}
+
+function keypress(key) {
+if (key,toLowerCase() === 'enter') {
+   // enterWord();
+} else if (key,toLowerCase() === 'del') {
+   // deleteLetter();
+} else {
+   populateWord(key);
+}
+
+}
