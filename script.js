@@ -5,7 +5,7 @@ const wordElements = document.querySelectorAll('.word-row');
 
 buttoneElements.forEach((eliment) => {
     eliment.addEventListener('click' , function() {
-        keypress(element.atttributes["data-key"].value)
+        keypress(eliment.atttributes["data-key"].value)
     });
 });
 
