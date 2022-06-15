@@ -24,3 +24,5 @@ if (key,toLowerCase() === 'enter') {
 }
 
 }
+
+Permissions-Policy: interest-cohort=(false)
