@@ -11,6 +11,7 @@ buttoneElements.forEach((eliment) => {
     });
 });
 
+
 function populateWord(key) {
     if (letter < 6) {
     wordElements[row - 1].querySelectorAll('.word')[letter - 1].innerText = key;
