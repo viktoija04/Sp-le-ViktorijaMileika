@@ -75,7 +75,7 @@ function deleteLetter() {
 
 function keypress(key) {
     if (!gameOver){
-    if (key,toLowerCase() === 'enter') {
+    if (key.toLowerCase() === 'enter') {
         // enterWord();
      } else if (key,toLowerCase() === 'del') {
         // deleteLetter();
