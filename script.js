@@ -7,7 +7,7 @@ let gameOver = false;
 
 buttoneElements.forEach((eliment) => {
     eliment.addEventListener('click' , function() {
-        keypress(eliment.atttributes["data-key".value])
+        keypress(eliment.attributes["data-key".value])
     });
 });
 
