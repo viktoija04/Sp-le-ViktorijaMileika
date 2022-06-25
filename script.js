@@ -39,6 +39,11 @@ function checkWord() {
 
     if (numOfCorrectAlphabets === 5) {
         gameOver = true;
+        guessedCorrectly = true;
+        alert('Congratulations! You have guessed the word of the day.')
+    } else if (row === 6) {
+        gameOver = true;
+        alert('Better luck next time. Th e word was: ' + wordForTheDay);
     }
 }
 
@@ -51,6 +56,8 @@ function enterWord() {
         letter =1;
     }
 }
+
+
 
 function deleteLetter() {
     const letterelements = wordElements[row - 1].querySelectorAll('.word');
@@ -67,13 +74,16 @@ function deleteLetter() {
 }
 
 function keypress(key) {
-if (key,toLowerCase() === 'enter') {
-   // enterWord();
-} else if (key,toLowerCase() === 'del') {
-   // deleteLetter();
-} else {
-   populateWord(key);
+    if (!gameOver){
+    if (key,toLowerCase() === 'enter') {
+        // enterWord();
+     } else if (key,toLowerCase() === 'del') {
+        // deleteLetter();
+     } else {
+        populateWord(key);
+     }
+    } else {
+    alert('Game over! Please play again tomorrow and guess a new word')
 }
-
 }
 
